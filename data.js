@@ -20,7 +20,7 @@ var data = [{
     "cubie-species": "Cat",
     "cubie-img": "87GHtw",
     "cubie-template": "99OLKs",
-    "cubie-story-content": "Cute and friendly, Kit Kat is the purrfect Cat Cubie for you. Fiercely loyal, once she chooses an owner, she will never leave their side and protect them until her last breath. But beware, as she only imprints on one owner, she will live out the remainder of her life in depression should her owner pass before she does. "
+    "cubie-story-content": "Cute and friendly, Cassie is the purrfect Cat Cubie for you. Fiercely loyal, once she chooses an owner, she will never leave their side and protect them until her last breath. But beware, as she only imprints on one owner, she will live out the remainder of her life in depression should her owner pass before she does. "
 },
 {
     "cubie-name": "Azure",
