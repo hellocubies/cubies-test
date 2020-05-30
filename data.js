@@ -102,8 +102,6 @@ var data = [{
     "cubie-template": "9kdm4",
     "cubie-story-content": "A cute and lovable Turtle Cubie, Trinity is very popular among her friends. A great swimmer and an even better diver, she can take you scuba diving anywhere. She befriends humans easily, and she’s perfect for you if it’s your first time adopting a Cubie."
 },
-
-
 {
     "cubie-name": "Taylor",
     "cubie-rarity": "Common",
@@ -111,6 +109,15 @@ var data = [{
     "cubie-img": "Osi24",
     "cubie-template": "Pbsw4",
     "cubie-story-content": "Like all Tissue Cubies, Taylor lives her life in service of others. As a compassionate and helpful Cubie, she is perfect for this role. If you’re ever feeling lonely or alone, come visit Taylor. She’ll hand you tissues as she listens to your sorrows. "
+},
+{
+    "cubie-name": "Kade",
+    "cubie-rarity": "Common",
+    "cubie-species": "Knight",
+    "cubie-img": "Iuy56",
+    "cubie-template": "9vfGh",
+    "cubie-story-content": "Brave and courageous, Kade is the perfect Knight Cubie. With a huge sense of justice, Kade will always do his best to right any wrongs he sees. If you’re ever in need of help, call on him. He will do his best to help, which isn't always perfect, he makes mistakes too. "
 }
+
 
 ];

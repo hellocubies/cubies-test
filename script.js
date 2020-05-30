@@ -2,14 +2,40 @@ let cubies = window.data; //checklist data  가져오기
 let myStorage = window.localStorage; //로컬 저장소 만들기
 
 //download number check하기. 처음이면 0
-let dnNum;
-if (myStorage.getItem('downloadToday') !== null) {
-    dnNum = myStorage.getItem('downloadToday');
-} else {
-    dnNum = 0;
-    myStorage.setItem('downloadToday', dnNum);
+// let dnNum;
+// if (myStorage.getItem('downloadToday') !== null) {
+//     dnNum = myStorage.getItem('downloadToday');
+// } else {
+//     dnNum = 0;
+//     myStorage.setItem('downloadToday', dnNum);
+// }
+
+
+//getCubie눌리면 실행하게 하기. 
+//Daily cubie 6시간에 한번씩 리셋되게 하기
+let targetDaily = document.querySelector('div.get-cubie');
+let nextEndtime = 0, //endTime
+    downloaded = 0,
+    tempImg = ['Qub87'],
+    tempName = ['TEST']; // 블랭크 이미지로 바꿔와야 함. 안쓰이지만 값 필요
+let timenow = Date.now();
+
+
+if (myStorage.getItem('nextEndtime') !== null) {
+    nextEndtime = myStorage.getItem('nextEndtime');
 }
 
+if (nextEndtime > timenow) { // endtime지났으면 초기화 상태로 유지
+    if (myStorage.getItem('downloaded') !== null) {
+        downloaded = myStorage.getItem('downloaded');
+    }
+    if (myStorage.getItem('tempImg') !== null) {
+        tempImg = myStorage.getItem('tempImg');
+    }
+    if (myStorage.getItem('tempName') !== null) {
+        tempName = myStorage.getItem('tempName');
+    }
+}
 
 //test용 초기화하기
 // let btnInit = document.querySelector('.btn-init');
@@ -96,6 +122,7 @@ function showGetCubie() {
     aboutUs.style.display = 'none';
     getCubie.style.display = 'block';
     checklist.style.display = 'none';
+    document.querySelector('.remaining-time').textContent = getTimeRemaining(nextEndtime);
 }
 
 //story 창 close 버튼 모든 cubie에 붙이기
@@ -176,31 +203,6 @@ function storyOpen() {
     prevStory = cubieStory;
 }
 
-//getCubie눌리면 실행하게 하기. 
-//Daily cubie 6시간에 한번씩 리셋되게 하기
-let targetDaily = document.querySelector('div.get-cubie');
-let nextEndtime = 0, //endTime
-    downloaded = 0,
-    tempImg = ['Qub87'],
-    tempName = ['TEST']; // 블랭크 이미지로 바꿔와야 함. 안쓰이지만 값 필요
-let timenow = Date.now();
-
-
-if (myStorage.getItem('nextEndtime') !== null) {
-    nextEndtime = myStorage.getItem('nextEndtime');
-}
-
-if (nextEndtime > timenow) { // endtime지났으면 초기화 상태로 유지
-    if (myStorage.getItem('downloaded') !== null) {
-        downloaded = myStorage.getItem('downloaded');
-    }
-    if (myStorage.getItem('tempImg') !== null) {
-        tempImg = myStorage.getItem('tempImg');
-    }
-    if (myStorage.getItem('tempName') !== null) {
-        tempName = myStorage.getItem('tempName');
-    }
-}
 
 // console.log('nextEndtime', nextEndtime);
 // console.log('downloaded', downloaded);

@@ -10,6 +10,10 @@ var templateData = { // template file name , rarity 1 = legendary, 2 = epic, 3 =
     "Cameron": ["q10Iu",4],
     "Ruby": ["Qub87",2],
     "Hayden": ["Qub87",4],
-    "Penny": ["jkieO",4]
+    "Penny": ["jkieO",4],
+    "Trinity": ["9kdm4",3],
+    "Taylor" : ["Pbsw4", 2],
+    "Kade" : ["9vfGh", 1]
+
 };
 

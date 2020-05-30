@@ -36,13 +36,14 @@ button {
 
 .menu-item {
   background-color: #a0ffe6;
-  padding: 10px;
+  padding: 5px 20px;
   border-radius: 15px;
   border: none;
   font-size: 18px;
   font-weight: 700;
   font-family: 'Righteous', cursive;
   color: #303960;
+  margin:auto 10px;
 }
 
 .btn-init {
@@ -138,7 +139,7 @@ button {
   background-image: url("images/Untitled_Artwork.png");
   background-color: #ffffff;
   /* height: 500px; */
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 370px 370px;
   margin : 5px;
