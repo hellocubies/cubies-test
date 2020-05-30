@@ -82,8 +82,8 @@ var data = [{
     "cubie-name": "Hayden",
     "cubie-rarity": "Common",
     "cubie-species": "Garbage Heap",
-    "cubie-img": "ahg6Hs",
-    "cubie-template": "Qub87",
+    "cubie-img": "87uty",
+    "cubie-template": "3Hgsd",
     "cubie-story-content": "As a Garbage Heap Cubie, Hayden likes all things disgusting. He woke up one day to find himself in a dumpster and promptly made himself at home, covering himself with an unknown green goo. Now he jumps from dumpster to dumpster every week, eating the most disgusting trash possible."
 },
 {
@@ -93,6 +93,24 @@ var data = [{
     "cubie-img": "xmf8U",
     "cubie-template": "jkieO",
     "cubie-story-content": "Known for her beautiful voice and her love for making music, Penny the Piano Cubie is the one to call if your ever hosting a party. She can change the mood of any party in one hot second, and whenever she sings, everyone stops to listen and to enjoy. She’s one musical Cubie!"
+},
+{
+    "cubie-name": "Trinity",
+    "cubie-rarity": "Common",
+    "cubie-species": "Turtle",
+    "cubie-img": "Nzcd72",
+    "cubie-template": "9kdm4",
+    "cubie-story-content": "A cute and lovable Turtle Cubie, Trinity is very popular among her friends. A great swimmer and an even better diver, she can take you scuba diving anywhere. She befriends humans easily, and she’s perfect for you if it’s your first time adopting a Cubie."
+},
+
+
+{
+    "cubie-name": "Taylor",
+    "cubie-rarity": "Common",
+    "cubie-species": "Tissue",
+    "cubie-img": "Osi24",
+    "cubie-template": "Pbsw4",
+    "cubie-story-content": "Like all Tissue Cubies, Taylor lives her life in service of others. As a compassionate and helpful Cubie, she is perfect for this role. If you’re ever feeling lonely or alone, come visit Taylor. She’ll hand you tissues as she listens to your sorrows. "
 }
 
 ];
