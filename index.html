@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168223747-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-168223747-1');
+    </script> -->
+
     <meta charset="utf-8">
+    <meta property="og:image" content="images/bH7s6.JPG" />
+    <meta name="description"
+        content="The easiest and the cutest paper toy, Cubies.  Make your collection by getting daily mystery cubies.  Don't miss out on the next chance.">
+    <meta name=”keywords” content=”papertoy,paper,toy,cube,cubie,cubies,easy” />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link rel="shortcut icon" href="images/bH7s6.JPG" />
 
     <title>Cubies Cubies Cubies</title>
@@ -9,8 +24,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Righteous&family=Roboto&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://hellocubies.github.io/cubies/styles.css">
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <link rel="stylesheet" href="styles.css">
 
     <script src="https://kit.fontawesome.com/5c481b11cf.js" crossorigin="anonymous"></script>
 </head>
@@ -19,12 +34,35 @@
 
     <div class="header-section">
         <h1>Welcome to CUBIES WORLD!</h1>
+        <h3>Create your own Cubie Collection</h3>
         <div class="menu-bar">
             <button class="menu-item btn-about-us">About Us</button>
-            <button class="menu-item btn-checklist">Checklist</button>
             <button class="menu-item btn-get-cubie">Get Cubie!</button>
+            <button class="menu-item btn-checklist">Checklist</button>
             <button class="menu-item btn-init">Initialize</button>
         </div>
+    </div>
+    <div id="help-icon">
+        <i class="far fa-question-circle"></i>
+    </div>
+    <div id="help-section">
+
+        Been on this website for a few minutes but still unsure about how to navigate it? Don’t worry, this guide will
+        help answer your questions!
+
+        <h2 class="help-item">GET CUBIES</h2>
+
+        In the “Get Cubies” section, there’s a button called “Get My Lucky Cubie”. Once you click it, a file of a Cubie
+        will pop up, and you’ll be able to download that file and print it out to make the Cubie. This section refreshes
+        every two hours, so you’ll be able to get a new Cubie then. But beware, it’s possible to get a duplicate Cubie!
+
+        <h2 class="help-item">CHECKLIST</h2>
+
+        The “Checklist” section of the website has all the Cubies up to date. Once you get a Cubie, you can press the “I
+        own this Cubie” button in order to confirm that you have to Cubie and to see that Cubie’s origin story. Click
+        the image to enlarge it and click it again to return.
+        <p id="help-close"> <i class="far fa-times-circle"></i></p>
+
     </div>
     <div class="about-us">
         <div class="about-cubie">
@@ -54,45 +92,55 @@
         <div class="about-crew">
             <div class="crew-row">
                 <div class="crew-card">
-                    <div class="crew-cubie"></div>
-                    Cephalopod:
-                    The original Cubie maker, he is known for his originality and creativity. He first started making
-                    Cubies with his friends in fourth grade for fun. He quit soon after though as he lost interest. He
-                    picked up this idea again a couple of years later, though, and turned it into the huge thing it is
-                    today.
+                    <div class="crew-desc">
+                        <h4>Cephalopod</h4>
+                        The original Cubie maker, he is known for his originality and creativity. He first started
+                        making
+                        Cubies with his friends in fourth grade for fun. He quit soon after though as he lost interest.
+                        He
+                        picked up this idea again a couple of years later, though, and turned it into the huge thing it
+                        is
+                        today.
+                    </div>
+                    <div class="crew-img"><img class="crew-cubie" src="images/Ivc31.JPG" alt=""></div>
+                    <div class="crew-desc">
+
+                    </div>
 
                 </div>
+                <div class="crew-row">
+                    <div class="crew-card">
+                        <div class="crew-img"><img class="crew-cubie" src="images/bH7s6.JPG" alt=""></div>
+                        <div class="crew-desc">
+                            <h4>RaiderX</h4>
+                            The first one to be recruited by Cephalopod to work on the Cubies, RaiderX is known for his
+                            dexterity and love of Cubies. The first one to make every single Cubie, he checks to make
+                            sure that
+                            these Cubies are ready to be published on the website.
+                        </div>
 
-            </div>
-            <div class="crew-row">
-
-                <div class="crew-card">
-                    <div class="crew-cubie"></div>
-                    RaiderX:
-                    The first one to be recruited by Cephalopod to work on the Cubies, RaiderX is known for his
-                    dexterity and love of Cubies. The first one to make every single Cubie, he checks to make sure that
-                    these Cubies are ready to be published on the website.
-
+                    </div>
                 </div>
-
-            </div>
-            <div class="crew-row">
-                <div class="crew-card">
-                    <div class="crew-cubie"></div>
-                    LilyFlower:
-                    The second and the last one to be recruited, LilyFlower is known for her creativity and her love for
-                    books. As a talented writer, she does all of the writing for this website, including the origin
-                    stories of the Cubies.
-
+                <div class="crew-row">
+                    <div class="crew-card">
+                        <div class="crew-desc">
+                            <h4>LilyFlower</h4>
+                            The second and the last one to be recruited, LilyFlower is known for her creativity and her
+                            love for
+                            books. As a talented writer, she does all of the writing for this website, including the
+                            origin
+                            stories of the Cubies.
+                        </div>
+                        <div class="crew-img">
+                            <img class="crew-cubie" src="images/Hhv32.JPG" alt="">
+                        </div>
+                    </div>
                 </div>
-
-            </div>
-            <div class="crew-row empty-row">
-
             </div>
         </div>
     </div>
     <div class="main-section">
+
         <div class="checklist card-list">
 
         </div>
@@ -106,23 +154,23 @@
 
 
     <footer class="footer">
-        Copyright CLR (C : Designer, L : Writer, R : Builder)
+        Copyright CRL ( C : Designer, R : Builder, L : Writer )
     </footer>
 
     <template id="daily-temp">
         <div class="daily-chance">
             <div class="before-get">
                 <div class="before-img">
-                   
+
                 </div>
                 <div class="before-desc">
                     <div class="before-message">
-                        You can get one lucky cubie in every 6 hours!<br>
-                        Don't miss out your cute cubies!<br>
+                        You can get one lucky cubie in every 2 hours!<br>
+                        Don't miss out your cute cubies!<br><br>
 
                         Your Cubie is waiting for you
                     </div>
-                    <button class="btn-lucky">Show my Lucky Cubie</button>
+                    <button class="btn-lucky">Show Mystery Cubie</button>
                 </div>
 
             </div>
@@ -139,7 +187,7 @@
                     </div>
                     <p>Your next cubie comes in </p>
                     <div class="remaining-time"></div>
-                   
+                    <div class="time-refresh"><i class="fas fa-sync"></i></div>
                 </div>
             </div>
 
@@ -152,7 +200,8 @@
     <template id="card-temp">
         <div class="thumb-card">
             <div class="thumb-img">
-                <img class="cubie-img" src="images/ghgjh.JPG" alt="">
+                <img class="cubie-img" src="images/Rtj375.JPG" alt="">
+                <img class="cubie-img-big" src="images/Rtj375.JPG" title="Click the image to close the image.">
                 <div class="thumb-content">
                     <div class="cubie-name">Name : Cat</div>
                     <div class="cubie-rarity">Rarity : Rare</div>
@@ -181,12 +230,9 @@
     </template>
 
 
-    <script type="text/javascript" src="https://hellocubies.github.io/cubies/data.js"></script>
-    <script type="text/javascript" src="https://hellocubies.github.io/cubies/templateData.js"></script>
-    <script type="text/javascript" src="https://hellocubies.github.io/cubies/script.js"></script>
-    <!-- <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="templateData.js"></script>
-    <script type="text/javascript" src="script.js"></script> -->
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>

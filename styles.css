@@ -9,25 +9,72 @@ body {
 }
 
 
-h1, h2 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Righteous', cursive;
 }
 
-.remaining-time{
+.remaining-time {
   font-family: 'Righteous', cursive;
   font-size: 22px;
 }
+
 button {
   font-family: 'Righteous', cursive;
 }
 
 .header-section {
-  margin: 10px 20px;
+  margin: 5px 20px;
   border-radius: 20px;
   background-color: #ffd5e5;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
 
+}
+
+#help-icon {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: 20px;
+  left: 50px;
+  font-size: 30px;
+  color: #303960;
+}
+
+#help-section {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  width: 450px;
+  background-color: #fff;
+  /* background-color: #81f5ff; */
+  border-radius: 15px;
+  /* border-style:solid;
+  border-width : 4px;
+  border-color : #ffd5e5; */
+  padding: 15px;
+  line-height: 1.5;
+  /* font-family: 'Righteous', cursive; */
+  /* font-size : 16px; */
+  z-index: 2;
+}
+
+#help-close {
+  text-align: right;
+  padding-right: 10px;
+  font-size: 30px;
+}
+
+.help-item {
+  background-color: #a0ffe6;
+  border-radius: 15px;
+  border: none;
+  padding: 5px 20px;
 }
 
 .main-section {
@@ -43,67 +90,100 @@ button {
   font-weight: 700;
   font-family: 'Righteous', cursive;
   color: #303960;
-  margin:auto 10px;
+  margin: auto 10px;
 }
 
 .btn-init {
-  display:none;
+  display: none;
   color: red;
 }
+
 .about-us {
   display: block;
   margin: 10px 20px;
-  text-align : center;
+  text-align: center;
   font-size: 16px;
   line-height: 1.5;
   border-radius: 20px;
-  
+
   background-color: #a0ffe6;
 }
 
 .about-cubie {
   display: inline-block;
   background-color: #a0ffe6;
-  width: 400px;
+  width: 420px;
   /* padding: 20px; */
   border-radius: 15px;
-  text-align : left;
-  margin : 10px;
+  text-align: left;
+  margin: 10px;
   vertical-align: top;
   /* padding-bottom : 100px; */
 }
 
 .about-crew {
   display: inline-block;
-  text-align : left;
+  text-align: left;
   vertical-align: top;
-  padding-top : 20px;
+  padding-top: 20px;
 
 }
 
 .crew-row {
   /* display: inline-block; */
   /* margin: auto; */
-  padding : 1px;
+  padding: 1px;
 }
 
 .crew-card {
-  width: 400px;
+  width: 450px;
   display: inline-block;
   background-color: #81f5ff;
   border-radius: 15px;
-  padding: 10px;
-  margin : 10px;
+  padding: 0px 15px 10px 15px;
+  margin: 10px;
 }
 
-.crew-cubie {
-  width: 120px;
+.crew-desc {
   display: inline-block;
+  vertical-align: middle;
+  width: 310px;
+  /* padding : 10px; */
+}
+
+.crew-img {
+  width: 110px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+}
+
+/* .crew-img {
+  display: inline-block;
+  position: relative;
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+  border-radius: 50%;
+  vertical-align: top;
+}
+
+.crew-img img {
+  width: auto;
+  height: 100%;
+  margin-right: -5px;
+} */
+
+.crew-cubie {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
 }
 
 .empty-row {
-  width : 10px;
-  height : 100px;
+  width: 10px;
+  height: 100px;
 }
 
 .checklist {
@@ -119,85 +199,93 @@ button {
 }
 
 .daily-chance {
-  display:block;
+  display: block;
   /* width : 350px; */
 }
 
 
 .before-get {
-  padding : 10px;
+  padding: 10px;
   /* position : relative; */
-  margin : auto;
+  margin: auto;
   /* height : 450px; */
   font-size: 0;
 }
-.before-img{
-  width : 400px;
-  height : 400px;
-  display:inline-block;
-  vertical-align : middle; 
+
+.before-img {
+  width: 400px;
+  height: 400px;
+  display: inline-block;
+  vertical-align: middle;
   background-image: url("images/Untitled_Artwork.png");
   background-color: #ffffff;
   /* height: 500px; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: 370px 370px;
-  margin : 5px;
-  text-align : bottom;
+  margin: 5px;
+  text-align: bottom;
 }
-.before-desc{
-  width : 280px;
-  height : 200px;
-  display : inline-block;
-  vertical-align : middle; 
+
+.before-desc {
+  width: 280px;
+  height: 200px;
+  display: inline-block;
+  vertical-align: middle;
   background-color: #ffd5e5;
   border-radius: 15px;
   padding: 20px;
-  margin : 10px;
-  margin : 5px;
+  margin: 10px;
+  margin: 5px;
 }
-.before-message{
-  display : inline-block;
+
+.before-message {
+  display: inline-block;
   /* vertical-align : middle;  */
   font-size: 20px;
 }
 
-.btn-lucky{
+.btn-lucky {
   background-color: #303960;
   border: none;
   border-radius: 10px;
   color: #ffffdd;
   padding: 5px 10px;
-  margin : 15px;
+  margin: 15px;
   font-family: 'Righteous', cursive;
-  font-size : 18px;
-  
+  font-size: 18px;
+
 }
+
 .after-get {
-  display : none;
+  display: none;
 }
-.lucky-title{
+
+.lucky-title {
   background-color: #81f5ff;
 }
-.title-box{
-  display:inline-block;
-  vertical-align : middle; 
+
+.title-box {
+  display: inline-block;
+  vertical-align: middle;
 }
-.after-desc{
-  width : 280px;
-  height : 200px;
-  display : inline-block;
-  vertical-align : middle; 
+
+.after-desc {
+  width: 280px;
+  height: 220px;
+  display: inline-block;
+  vertical-align: middle;
   background-color: #81f5ff;
   border-radius: 15px;
   padding: 20px;
-  margin : 10px;
-  margin : 5px;
+  margin: 10px;
+  margin: 5px;
 }
-.lucky-template{
-  display:inline-block;
-  width : 400px;
-  height : 400px;
+
+.lucky-template {
+  display: inline-block;
+  width: 400px;
+  height: 400px;
   background-image: url("images/98BBs.png");
   background-color: #ffffff;
   /* height: 500px; */
@@ -205,18 +293,23 @@ button {
   background-repeat: no-repeat;
   background-size: 280px;
   position: relative;
-  
+
 }
 
-.btn-download{
+.btn-download {
   background-color: #303960;
   border: none;
   border-radius: 10px;
   color: #ffffdd;
   padding: 5px 10px;
-  margin : 15px;
+  margin: 15px;
   font-family: 'Righteous', cursive;
-  font-size : 18px;
+  font-size: 18px;
+}
+
+.time-refresh {
+  padding: 5px;
+  font-size: 24px;
 }
 
 .card-list {
@@ -229,12 +322,12 @@ button {
 .thumb-card {
   display: inline-block;
   position: relative;
-  width: 300px;
+  width: 330px;
   height: 130px;
   background-color: #81f5ff;
   padding: 15px;
   margin: 5px;
- 
+
   border-radius: 20px;
   text-align: left;
 }
@@ -244,6 +337,17 @@ button {
   width: 100px;
   height: 100px;
   border-radius: 20px;
+}
+
+.cubie-img-big {
+  display: none;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 280px;
+  height: 280px;
+  border-radius: 20px;
+  z-index: 2;
 }
 
 .thumb-content {
@@ -256,7 +360,7 @@ button {
 
 .story-toggle {
   display: none;
-  padding-top : 5px;
+  padding-top: 5px;
 }
 
 .btn-story-toggle {
@@ -271,10 +375,10 @@ button {
 
 .cubie-story {
   display: none;
-  width: 290px;
+  width: 320px;
   position: absolute;
   left: 0px;
-  top: 150px;
+  top: 160px;
   z-index: 2;
   background-color: #303960;
   color: #ffffdd;
