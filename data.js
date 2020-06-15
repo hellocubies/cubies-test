@@ -349,6 +349,38 @@ var data = [{
         "cubie-img": "ICw9P",
         "cubie-template": "pOoss7",
         "cubie-story-content": "Displaying a wide variety of faces and expressions, Eleanor the Emoji Cubie is very fickle.She goes through hundreds of emotions every day, from happiness to anger to sadness and to much, much more.Because she’ s so sensitive and emotional, Eleanor has a tendency to exaggerate things, and this has, on many occasions, led people to believe that she lies a lot.As a result, it’ s hard for her to make friends, but once she does, she tries her best to keep that friendship."
+    },
+    {
+        "cubie-name": "Shawn",
+        "cubie-rarity": "Common",
+        "cubie-species": "Soda",
+        "cubie-img": "I8wnC",
+        "cubie-template": "qQp92",
+        "cubie-story-content": "Just like you’ d expect from a Soda Cubie, Shawn has a bubbly personality to match the bubbly drink inside.Always eager and outgoing, Shawn makes friends easily and is pretty popular in school.Not only that, he’ s also a great student, smart and well - rounded.He’ s the poster child for the perfect golden boy, for sure, but that’ s only on the outside.Inside, he has many problems to deal with, just like your average teenager.The worst of these is his fear of heights, which is a problem when his friends want to ride a rollercoaster at an amusement park."
+    },
+    {
+        "cubie-name": "Erin",
+        "cubie-rarity": "Common",
+        "cubie-species": "Earth",
+        "cubie-img": "bCs75",
+        "cubie-template": "Xzm8Y",
+        "cubie-story-content": "As a model of the world we live in , Erin the Earth Cubie is big on love and peace.She loves all living things, both big and small, both animals and plants.If she sees an animal in need, or a withering plant, Erin does her best to help them out.She’ s also the most peaceful one out of all her friends;she plays peacemaker when they argue and helps them make up when they fight."
+    },
+    {
+        "cubie-name": "Scott",
+        "cubie-rarity": "Rare",
+        "cubie-species": "Submarine",
+        "cubie-img": "Hs7Tv",
+        "cubie-template": "Fe63L",
+        "cubie-story-content": "A lover of the deep, dark blue, Scott the Submarine Cubie can usually be found exploring an ocean somewhere.He loves sea life, especially sea anemones, and took up photography to keep pictures of sea creatures he saw.As he has a rather cold demeanor, Scott does t have much friends, but he doesn’ t care, not really;as a quiet, reserved person, he prefers being by himself.As a result, Scott spends much of his time in the ocean rather than on land, since he doesn’ t have many friends to hang out with on land anyway."
+    },
+    {
+        "cubie-name": "Matt",
+        "cubie-rarity": "Epic",
+        "cubie-species": "Meteor",
+        "cubie-img": "Jh7Rk",
+        "cubie-template": "O82Pd",
+        "cubie-story-content": "A couple thousand years old, Matt the Meteor Cubie came to Earth when he got driven off course by some comets and ended up crash landing here.Although he has made countless tries to get back to space, all his attempts have failed so far.But for a couple of decades now, Matt has been rethinking his decision to try to return home.He’ s actually really popular, and he doesn’ t want to lose all his friends when he goes back to outer space."
     }
 
 ];

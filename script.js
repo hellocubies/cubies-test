@@ -48,6 +48,11 @@ function initStorage() {
     localStorage.removeItem('nextEndtime');
     localStorage.removeItem('downloaded');
     localStorage.removeItem('tempImg');
+    // ownership초기화
+    cubies.forEach(cubie => localStorage.removeItem(cubie['cubie-name']));
+    //test용..  Cassie ownership 4로 세팅하고 확률 보기
+    // localStorage.setItem('Cassie', 4);
+    // localStorage.setItem('Kimmy', 4);
 }
 // test용 초기화하기 끝
 
@@ -77,13 +82,13 @@ function createList(cubie) {
     newCubie.querySelector('.btn-story-toggle').classList.add(cubie['cubie-name']);
 
     targetList.insertBefore(newCubie, targetList.childNodes[0]);
-    //check ownership from local storage, check and show story toggle button - 나중에 다운로드 받으면 ownership 체크되게 바꿀때 사용 가능
+    //check ownership from local storage, check and show story toggle button - 다운로드 받으면 ownership 증가되게 함 
     let ownership = myStorage.getItem(cubie['cubie-name']);
-    // console.log(ownership);
+
     if (Number(ownership) >= 1) {
-        // console.log('Ownership is 1');
+
         let toggleBtn = document.querySelector('div.story-toggle.' + cubie['cubie-name']);
-        // console.log(toggleBtn);
+
         toggleBtn.style.display = 'block';
         let checkOwn = document.querySelector('input.own-check.' + cubie['cubie-name']);
         checkOwn.checked = true;
@@ -158,14 +163,14 @@ function showGetCubie() {
 
 //story 창 close 버튼 모든 cubie에 붙이기
 let closeBtn = document.getElementsByClassName('btn-close');
-// console.log(closeBtn);
+
 for (let i = 0; i < closeBtn.length; i++) {
     closeBtn[i].onclick = closeStory;
 }
 
 function closeStory() {
     let closingStory = document.querySelector('div.cubie-story.' + this.classList[1]);
-    // console.log(closingStory);
+
     closingStory.style.display = 'none';
     let toggleBtn = document.querySelector('div.story-toggle.' + this.classList[1]);
     toggleBtn.style.display = 'block';
@@ -173,7 +178,7 @@ function closeStory() {
 }
 //own checkbox check될때 story보여주면서 다른 story창 닫기,  uncheck될때 mystory button없애기
 let el = document.getElementsByTagName('input');
-// console.log(el);
+
 for (let i = 0; i < el.length; i++) {
     if (el[i].type === 'checkbox') {
         el[i].onclick = showStory;
@@ -183,11 +188,11 @@ for (let i = 0; i < el.length; i++) {
 function showStory() {
     let cubieName = this.classList[1];
     if (this.checked === true) {
-        // console.log(cubieName);
+
         let cubieStory = document.querySelector('div.cubie-story.' + cubieName);
-        // console.log(cubieStory);
+
         if (prevStory !== undefined) {
-            // console.log(prevStory);
+
             prevStory.style.display = 'none';
             let toggleBtn = document.querySelector('div.story-toggle.' + prevStory.classList[1]);
             toggleBtn.style.display = 'block';
@@ -195,12 +200,12 @@ function showStory() {
         cubieStory.style.display = 'block';
         prevStory = cubieStory;
         myStorage.setItem(cubieName, 1);
-        // console.log('myStorage' + myStorage.getItem(cubieName));
+
     } else {
         let cubieName = this.classList[1];
-        // console.log(cubieName);
+
         let cubieStory = document.querySelector('div.cubie-story.' + cubieName);
-        // console.log(cubieStory);
+
         cubieStory.style.display = 'none';
         let toggleBtn = document.querySelector('div.story-toggle.' + cubieName);
         toggleBtn.style.display = 'none';
@@ -215,16 +220,16 @@ function showStory() {
 
 //my story button으로 스토리 다시열어보기
 let myStoryBtn = document.getElementsByClassName('btn-story-toggle');
-// console.log(myStoryBtn);
+
 for (let i = 0; i < myStoryBtn.length; i++) {
     myStoryBtn[i].onclick = storyOpen;
 }
 
 function storyOpen() {
     let cubieName = this.classList[1];
-    // console.log(cubieName);
+
     let cubieStory = document.querySelector('div.cubie-story.' + cubieName);
-    // console.log(cubieStory);
+
     if (prevStory !== undefined) {
         prevStory.style.display = 'none';
         let toggleBtn = document.querySelector('div.story-toggle.' + prevStory.classList[1]);
@@ -237,7 +242,7 @@ function storyOpen() {
 
 //getcubie누른 후에는 template과 다운로드 버튼, 다운로드 한 후에는 다시 물음표와 몇시간 후에 니 튜비 나온다는걸로 변경
 createDailyCubie(Number(nextEndtime));
-// console.log('downloaded', downloaded)
+
 
 function createDailyCubie(endstamp) {
     targetDaily = document.querySelector('div.get-cubie');
@@ -259,13 +264,12 @@ function createDailyCubie(endstamp) {
         if (downloaded === '1') {
 
             newDaily.querySelector('div.download-bar').style.display = 'none';
-            // console.log(newDaily.querySelector('div.download-bar'));
-            // console.log(newDaily.querySelector('div.download-bar').style.display);
+
             newDaily.querySelector('div.after-message').textContent = 'Are you enjoying the time with your ' + tempName + '?';
             newDaily.querySelector('div.remaining-time').textContent = getTimeRemaining(endstamp);
-        } else if (downloaded === '0') {
+        } else {
             newDaily.querySelector('div.download-bar').style.display = 'block';
-            // console.log('tempImg : ' + tempImg);
+
             newDaily.querySelector('div.after-message').textContent = 'Click download button and save the image';
             newDaily.querySelector('div.remaining-time').textContent = getTimeRemaining(endstamp);
         }
@@ -284,6 +288,7 @@ function refreshDailyCubie() {
         document.querySelector('div.download-bar').style.display = 'none';
         document.querySelector('div.after-message').textContent = 'Are you enjoying the time with your ' + tempName + '?';
         document.querySelector('div.remaining-time').textContent = getTimeRemaining(nextEndtime);
+
     } else if (downloaded === '0') {
         document.querySelector('div.download-bar').style.display = 'block';
 
@@ -293,14 +298,13 @@ function refreshDailyCubie() {
 }
 
 function getTimeRemaining(endtime) {
-    // console.log(Date.now());
+
     let t = endtime - Date.now();
-    // var t = Date.parse(endtime) - Date.parse(new Date());
-    // console.log(t);
+
     let seconds = Math.floor((t / 1000) % 60);
     let minutes = Math.floor((t / 1000 / 60) % 60);
     let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-    // var days = Math.floor(t / (1000 * 60 * 60 * 24));
+
     return hours + ' hours  ' + minutes + ' mins  ' + seconds + ' secs';
 }
 
@@ -312,35 +316,30 @@ getCubieBtn.onclick = getRandomCubie;
 
 function getRandomCubie() {
     refreshStoredData();
-    console.log(tempName);
+    // console.log(tempName);
     if (tempName === 'TEST') {
 
         let templates = window.templateData;
         let randomCubies = [];
         let rarityFreq = [1, 10, 20, 30]
 
-        //ownership 자동으로 계산
-        // let ownership;
 
         for (let key in templates) {
-            // ownership = myStorage.getItem(key);
-            // console.log('ownership', ownership);
-            for (let i = 0; i < rarityFreq[templates[key][1] - 1]; i++) {
-                randomCubies.push(key);
-                //한 템플릿이 3번이상 다운로드 되었으면 확률을 2로 낮춤
-                // if (i === 0 && ownership > 2) {
-                //     if (rarityFreq[templates[key][1] - 1] > 5) {
-                //         i += 7;
-                //     } else if (rarityFreq[templates[key][1] - 1] > 15) {
-                //         i += 17;
-                //     } else if (rarityFreq[templates[key][1] - 1] > 25) {
-                //         i += 27;
-                //     }
-                // }
-
+            ownership = myStorage.getItem(key);
+            // console.log('ownership', key, ownership);
+            // 한 템플릿이 3 번이상 다운로드 되었으면 확률을 2 로 낮춤
+            if (ownership > 2) {
+                for (let i = 0; i < 3; i++) {
+                    randomCubies.push(key);
+                }
+            } else {
+                for (let i = 0; i < rarityFreq[templates[key][1] - 1]; i++) {
+                    randomCubies.push(key);
+                }
             }
         }
 
+        console.log(randomCubies);
         let randomCubie = randomCubies[Math.floor(Math.random() * randomCubies.length)];
         let dailyChance = document.querySelector('div.daily-chance');
         let afterGet = dailyChance.querySelector('div.after-get');
@@ -360,7 +359,7 @@ function getRandomCubie() {
         myStorage.setItem('tempName', randomCubie);
         tempName = randomCubie;
         // console.log('chancenum', chanceNum);
-        //test time set-up  나중에 2시간으로 바뀌어야 함. 0.02시간
+        //time set-up   2시간
         myStorage.setItem('nextEndtime', timenow + (2 * 1000 * 60 * 60));
         nextEndtime = timenow + (2 * 1000 * 60 * 60);
         // console.log('endtime calculate', daily[chanceNum]);
@@ -398,6 +397,17 @@ function tempDown() {
 
     myStorage.setItem('downloaded', 1);
     downloaded = 1;
+    //download  받을때 회수 ownership 회수 하나 올리기
+    ownership = myStorage.getItem(tempName);
+    // console.log('download할때 ownership', ownership);
+    if (ownership === null) {
+        myStorage.setItem(tempName, 1);
+        ownership = 1;
+        // console.log('download후 1로 바꿈', ownership);
+    } else {
+        myStorage.setItem(tempName, ownership++);
+        // console.log('download할때마다 1씩 증가', ownership);
+    }
     window.open('images/' + tempImg + '.png');
 
 }
@@ -427,7 +437,6 @@ function refreshTime() {
     if (nextEndtime < timenow) {
         // document.querySelector('.before-message').textContent = 'Your Cubie is waiting for you';
         document.querySelector('.before-get').style.display = 'block';
-        // console.log(document.querySelector('div.before-get'));
         document.querySelector('.after-get').style.display = 'none';
     } else {
         document.querySelector('.remaining-time').textContent = getTimeRemaining(nextEndtime);
@@ -444,11 +453,11 @@ for (let i = 0; i < cubieImgs.length; i++) {
 }
 
 function imgPop() {
-    // console.log('this',this);
+
     let parentImg = this.parentNode;
-    // console.log('parentImg',parentImg);
+
     let cubieImgBig = parentImg.getElementsByClassName('cubie-img-big')[0];
-    // console.log('bigimg',cubieImgBig);
+
     cubieImgBig.src = this.src;
     cubieImgBig.style.display = 'block';
 }
